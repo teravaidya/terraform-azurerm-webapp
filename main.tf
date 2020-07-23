@@ -5,7 +5,7 @@ resource "azurerm_app_service_plan" "plan-app" {
   location            = var.location
   resource_group_name = var.resource_groupe_name
   sku {
-    tier = "Standard"
+    tier = var.sp_sku
     size = "S1"
   }
 }
