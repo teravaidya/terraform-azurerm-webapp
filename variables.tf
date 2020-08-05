@@ -19,3 +19,7 @@ variable "sp_sku"{
   description = "Service plan sku"
   default = "Standard"
 }
+
+variable "ftps_state" {
+  default = "AllAllowed"
+}
