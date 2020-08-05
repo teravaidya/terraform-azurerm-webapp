@@ -18,6 +18,9 @@ resource "azurerm_app_service" "app" {
   app_settings = {
     "INSTRUMENTATIONKEY" = azurerm_application_insights.appinsight-app.instrumentation_key
   }
+  site_config {
+     ftps_state = var.ftps_state
+  }
 }
 
 resource "azurerm_application_insights" "appinsight-app" {
